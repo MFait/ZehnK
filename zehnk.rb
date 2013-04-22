@@ -1,5 +1,8 @@
 require 'sinatra'
+require './lib/dice'
 
 get '/' do
-  'Hello  World'
+  dice = Dice.new
+  dice.roll
+  erb :index, :locals => { :dice => dice}
 end
