@@ -43,14 +43,13 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/dice.rb" afterPath="$PROJECT_DIR$/lib/dice.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dice_spec.rb" afterPath="$PROJECT_DIR$/spec/dice_spec.rb" />
     </list>
     <ignored path="zehnK.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366614324143" ignored="false" />
     <file path="/dice_spec.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366619794196" ignored="false" />
     <file path="/temp.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366614897929" ignored="false" />
-    <file path="/dice.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366619890497" ignored="false" />
+    <file path="/dice.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366620389655" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <file leaf-file-name="dice.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/dice.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="2" selection-start="347" selection-end="347" vertical-scroll-proportion="0.5760369">
+            <state line="5" column="29" selection-start="62" selection-end="62" vertical-scroll-proportion="0.115207374">
               <folding />
             </state>
           </provider>
@@ -385,7 +384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/dice.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="2" selection-start="347" selection-end="347" vertical-scroll-proportion="0.5760369">
+        <state line="5" column="29" selection-start="62" selection-end="62" vertical-scroll-proportion="0.115207374">
           <folding />
         </state>
       </provider>

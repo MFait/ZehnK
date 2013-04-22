@@ -1,5 +1,10 @@
 class Dice
 
+  MIN = 1
+  MAX = 6
+
+  private_constant :MIN, :MAX
+
   def initialize
     @face = 1
   end
@@ -9,16 +14,21 @@ class Dice
   end
 
   def face=(face)
-    raise(ArgumentError, 'Invalid Face') unless face.between?(1,6) and face.is_a? Integer
+    raise(ArgumentError, 'Invalid Face') unless valid_face?(face)
     @face = face
   end
 
+
   def roll
-    @face = range_rand(1, 6)
-    return self
+    @face = range_rand(MIN, MAX)
+    self
   end
 
   private
+
+  def valid_face?(face)
+    face.between?(MIN, MAX) and face.is_a? Integer
+  end
 
   def range_rand(min,max)
     min + Kernel.rand(max-min)
