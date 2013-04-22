@@ -31,6 +31,7 @@ class Dice
   end
 
   def range_rand(min,max)
+    max +=1
     min + Kernel.rand(max-min)
   end
 
