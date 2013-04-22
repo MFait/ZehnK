@@ -12,3 +12,11 @@ task :install do
     raise 'Bundle install failed'
   end
 end
+
+task :start do
+  ruby 'zehnk.rb'
+end
+
+task :shotgun do
+   `shotgun -p 4567 zehnk.rb`
+end
