@@ -5,11 +5,20 @@
 <head>
   <title> Zehnk </title>
 
+  <!-- Bootstrap -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
 </head>
 
 <body>
-<h1> <%= dice.face %> </h1>
+    <div class="container">
+        <div class="row">
+            <div class="span6 offset3">
+                <img src="images/dice_<%= dice.face %>.png" width="100px">
+                <br>
+                <input type="button" class="btn btn-success" value="Roll Dice" onclick="window.location.reload()"/>
+            </div>
+        </div>
+    </div>
 </body>
-
-
 </html>
