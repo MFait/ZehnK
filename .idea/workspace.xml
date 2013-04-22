@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="04146755-619a-4521-b1b0-3fed39da36ea" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/images/photo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.rspec" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/Commands.java" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/inspection/Default.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/Direction.java" />
@@ -12,9 +13,11 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/PHPUnit.iml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/Position.java" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/PositionTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/Rover.java" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/RoverTest.java" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/Student.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ZehnK.iml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/.idea/ant.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/RubyMine50/options/browsers.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/browsers.xml" />
@@ -23,6 +26,7 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/IdeaIC12/options/debugger.renderers.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/encoding.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/experience.html" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/RubyMine50/options/feature.usage.statistics.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/feature.usage.statistics.xml" />
@@ -30,19 +34,24 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/github_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/hobbies.html" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/notifications.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/path.macros.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/php.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/runner.layout.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/statistics.application.usages.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/css/style.css" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/RubyMine50/options/template.settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/template.settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/dice.rb" afterPath="$PROJECT_DIR$/lib/dice.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ZehnK.iml" afterPath="$PROJECT_DIR$/.idea/ZehnK.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zehnK.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,6 +59,8 @@
     <file path="/dice_spec.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366619794196" ignored="false" />
     <file path="/temp.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366614897929" ignored="false" />
     <file path="/dice.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366620389655" ignored="false" />
+    <file path="/Rakefile" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366621333546" ignored="false" />
+    <file path="/.rspec" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366621498541" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +80,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dice.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="dice.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/dice.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="29" selection-start="62" selection-end="62" vertical-scroll-proportion="0.115207374">
+            <state line="9" column="5" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".rspec" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.rspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,6 +137,8 @@
         <option value="$PROJECT_DIR$/dice.rb" />
         <option value="$PROJECT_DIR$/spec/dice_spec.rb" />
         <option value="$PROJECT_DIR$/lib/dice.rb" />
+        <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/.rspec" />
       </list>
     </option>
   </component>
@@ -158,6 +189,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ZehnK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZehnK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZehnK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZehnK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZehnK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,7 +443,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/dice.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="29" selection-start="62" selection-end="62" vertical-scroll-proportion="0.115207374">
+        <state line="9" column="5" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
