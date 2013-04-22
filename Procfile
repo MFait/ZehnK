@@ -1,0 +1,1 @@
+web: bundle exec ruby zehnk.rb -p $PORT
