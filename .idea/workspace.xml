@@ -15,18 +15,14 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/Rover.java" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/src/RoverTest.java" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/Student.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ZehnK.iml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/IdeaProjects/TWU_MarsRoverForDojo/.idea/ant.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/RubyMine50/options/browsers.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/browsers.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/code.style.schemes.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/contacts.html" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/IdeaIC12/options/debugger.renderers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/dice.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dice_spec.rb" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/encoding.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/experience.html" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/RubyMine50/options/feature.usage.statistics.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/feature.usage.statistics.xml" />
@@ -34,29 +30,27 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/github_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/hobbies.html" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/notifications.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/path.macros.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/php.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/runner.layout.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/statistics.application.usages.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/coswork/css/style.css" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/RubyMine50/options/template.settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/template.settings.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/Library/Preferences/WebIde60/options/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/PhpstormProjects/PHPUnit/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/dice.rb" afterPath="$PROJECT_DIR$/lib/dice.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dice_spec.rb" afterPath="$PROJECT_DIR$/spec/dice_spec.rb" />
     </list>
     <ignored path="zehnK.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366614324143" ignored="false" />
-    <file path="/dice_spec.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366617075297" ignored="false" />
+    <file path="/dice_spec.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366619794196" ignored="false" />
     <file path="/temp.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366614897929" ignored="false" />
-    <file path="/dice.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366617409027" ignored="false" />
+    <file path="/dice.rb" changelist="04146755-619a-4521-b1b0-3fed39da36ea" time="1366619890497" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,7 @@
       <file leaf-file-name="dice.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/dice.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.23041475">
+            <state line="25" column="2" selection-start="347" selection-end="347" vertical-scroll-proportion="0.5760369">
               <folding />
             </state>
           </provider>
@@ -88,7 +82,7 @@
       <file leaf-file-name="dice_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/dice_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="12" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+            <state line="26" column="34" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,14 +151,6 @@
               <option name="myItemId" value="ZehnK" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; RVM: ruby-2.0.0-p0 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -173,34 +159,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ZehnK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZehnK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZehnK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZehnK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ZehnK" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,6 +209,26 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <method />
     </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
@@ -400,14 +378,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/dice_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+        <state line="26" column="34" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/dice.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.23041475">
+        <state line="25" column="2" selection-start="347" selection-end="347" vertical-scroll-proportion="0.5760369">
           <folding />
         </state>
       </provider>
