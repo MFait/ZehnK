@@ -4,6 +4,7 @@ ruby "2.0.0"
 
 gem 'rake'
 gem 'rspec'
+gem 'rspec-mocks'
 gem 'sinatra'
 gem 'shotgun'
 gem 'haml'

@@ -30,9 +30,14 @@ class DiceSet
     taken_dice_set
   end
 
+  def roll
+    @dices.each {|dice| dice.roll}
+    self
+  end
+
   def ==(other)
     return false unless self.count == other.count
-    self.dices.clone.sort - other.dices.clone.sort == []
+    self.dices.clone.sort == other.dices.clone.sort
   end
 
   def +(other)
@@ -40,4 +45,12 @@ class DiceSet
     DiceSet.new.add(merged_dices)
   end
 
+  def to_s
+    string = ''
+    @dices.each do |dice|
+       string << dice.to_s
+
+    end
+    string
+  end
 end

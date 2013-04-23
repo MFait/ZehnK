@@ -1,5 +1,7 @@
 class Dice
 
+  include Comparable
+
   MIN = 1
   MAX = 6
 
@@ -26,6 +28,14 @@ class Dice
 
   def ==(other)
     self.face == other.face
+  end
+
+  def <=>(other)
+    self.face <=> other.face
+  end
+
+  def to_s
+    "D [#{@face}]"
   end
 
   private

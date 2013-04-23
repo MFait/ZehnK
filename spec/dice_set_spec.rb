@@ -31,21 +31,25 @@ describe 'DiceSet' do
   end
 
   it 'should merge dice sets' do
-    dice_set1 = dice_set_with([1,4])
-    dice_set2 = dice_set_with([3,2])
-
-    merged_dice_set = dice_set1 + dice_set2
-
+    merged_dice_set = dice_set_with([1,4]) + dice_set_with([3,2])
     merged_dice_set.should eq(dice_set_with([1,4,3,2]))
   end
 
+  it 'should roll the dice in the set' do
+     mocked_dice = double("dice")
+     mocked_dice.should_receive(:roll)
+
+     dice_set.add(mocked_dice).roll
+  end
 
 
-  private
+  #private
   def dice_set_with(faces)
     dice_set = DiceSet.new
     faces.each do |face|
-      dice_set.add(Dice.new.face =face)
+      dice = Dice.new
+      dice.face = face
+      dice_set.add(dice)
     end
     dice_set
   end
