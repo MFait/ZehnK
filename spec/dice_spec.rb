@@ -27,4 +27,6 @@ describe 'Dice' do
     expect(dice.roll.face).to eq(4)
   end
 
+  it { expect(Dice.new.face=3).to eq(Dice.new.face =3) }
+
 end

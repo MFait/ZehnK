@@ -24,6 +24,10 @@ class Dice
     self
   end
 
+  def ==(other)
+    self.face == other.face
+  end
+
   private
 
   def valid_face?(face)

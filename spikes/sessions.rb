@@ -1,21 +1,20 @@
 require 'sinatra'
 require 'sinatra/session'
+set :session_secret, 'So0perSeKr3t!'
 
 get '/' do
   session_start!
   session["message"] = 'Hello World'
   "Saying #{session['message']}"
-  
-  session_end!
-  "Ending the session"
-  
-  unless session?
-    "No session"
-  end
 end
 
 get '/killsession' do
   if session?
     session.clear
   end
+end
+
+get '/session' do
+  session_start!
+  "#{session['message']}"
 end
