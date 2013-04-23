@@ -1,5 +1,5 @@
 class Game
-  attr_reader :table_set, :pocket_set
+  attr_accessor :table_set, :pocket_set
 
   def start
     @table_set = DiceSet.new
@@ -8,5 +8,13 @@ class Game
     self
   end
 
+  def roll
+    @table_set.roll
+    self
+  end
 
+  def pocket(indices)
+    @pocket_set = @pocket_set + @table_set.take(indices)
+    self
+  end
 end
