@@ -10,11 +10,13 @@ describe 'DiceSet' do
 
   it {dice_set.count.should eq(0)}
 
-  it{ dice_set.add(dice).add(dice).count.should eq(2)}
+  it { dice_set.add(dice).add(dice).count.should eq(2)}
 
-  it 'should compare equality of two dice sets'do
-     DiceSet.new.add(dice).add(dice).should eq(DiceSet.new.add(dice).add(dice))
-  end
+  it { DiceSet.new.add(dice).add(dice).should eq(DiceSet.new.add(dice).add(dice))}
+
+  it { dice_set_with([1,2,3,4]).should eq(dice_set_with([1,2,3,4])) }
+
+  it { dice_set_with([1,2,3,4]).should_not eq(dice_set_with([5,6,1,2])) }
 
   #it 'should take dice from diceset' do
   #  dice_set.add(dice.roll).add(dice.roll).add(dice.roll)
@@ -22,4 +24,14 @@ describe 'DiceSet' do
   #  taken_dice_set.count.should eq(2)
   #  dice_set.count.should eq(1)
   #end
+
+  private
+  def dice_set_with(faces)
+    dice_set = DiceSet.new
+    faces.each do |face|
+      dice_set.add(Dice.new.face =face)
+    end
+    dice_set
+  end
+
 end
