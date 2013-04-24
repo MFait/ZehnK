@@ -6,9 +6,24 @@
     %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
   %body
     .container
-      .row.logo
-        %a(href="/")
-          %img(src="images/logo.png")
+      .row.logo.margin20
+        .span12
+          .span4
+            %a(href="/")
+              %img(src="images/logo.png")
+          .span6
+            .masthead
+              %ul{:class=> "nav nav-pills pull-right"}
+                %li{:class => "active"}
+                  %a{:href=> "#"}Play
+                %li
+                  %a{:href=> "#"}About
+                %li
+                  %a{:href=> "#"}Team
+                %li
+                  %a{:href => '/help'} Help
+      %hr
+
       %form{ :action => "/take", :method => "post"}
         .row
           .span8.offset2.center.well.dice_box
