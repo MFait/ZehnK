@@ -31,9 +31,15 @@
         .row
           .span8.offset2.center
             .btn-group
-              %a{:href=>"/roll", :class=>"btn btn-warning"} Roll
-              %input{:type=>"submit", :class=>"btn btn-success", :value=>"Take"}
-              %a{:href=>"/reset", :class=>"btn btn-danger"} Reset
+              %a{:href=>"/roll", :class=>"btn btn-warning"}
+                %span{:class=>"icon-random"}
+                Roll
+              %button{:type=>"submit", :class=>"btn btn-success"}
+                %span{:class=>"icon-download"}
+                Take
+              %a{:href=>"/reset", :class=>"btn btn-danger"}
+                %span{:class=>"icon-refresh"}
+                Reset
 
       .row
         .span8.offset2.center.well.margin20.dice_box
