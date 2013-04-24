@@ -7,10 +7,18 @@
   %body
     .container
 
-      .row
+      .row.logo
         %img(src="images/logo.png")
       .row
-        .span6.offset3
-          ==#{display_dice_set(game.table_set)}
-          %br
-          %input{:type=>"button", :class=>"btn btn-success", :value=>"Roll Dice", :onclick=>"window.location.reload()"}
+        .span8.offset2.center.well.dice_box
+          ==#{display_table_dice_set(game.table_set)}
+      .row
+        .span8.offset2.center
+          .btn-group
+            %input{:type=>"button", :class=>"btn btn-warning", :value=>"Roll", :onclick=>"window.location.reload()"}
+            %input{:type=>"button", :class=>"btn btn-success", :value=>"Take"}
+            %input{:type=>"button", :class=>"btn btn-danger", :value=>"Reset"}
+
+      .row
+        .span8.offset2.center.well.margin20.dice_box
+          ==#{display_pocket_dice_set(game.pocket_set)}
