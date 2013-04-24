@@ -1,6 +1,7 @@
 require './lib/dice'
 require './lib/dice_set'
 
+
 helpers do
   def display_table_dice_set(dice_set)
     output = []
@@ -29,5 +30,9 @@ helpers do
     <input type='checkbox' id='img_#{index}' name='dices[#{index}]'/>
     <label for='img_#{index}'><img src='images/dice_#{dice.face}.png'/></label>
     </div>"
+  end
+
+  def display_pocket_score(game)
+    "<div class='pocket_score'>Score #{game.pocket_score}</div>"
   end
 end

@@ -1,3 +1,4 @@
+require './lib/score'
 class Game
   attr_accessor :table_set, :pocket_set, :pocket_score
 
@@ -24,4 +25,5 @@ class Game
 
     self
   end
+
 end

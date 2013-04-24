@@ -16,6 +16,10 @@
     bottom: 10;
     left: 10;
 }
+.pocket_score {
+    font-size: 48px;
+    font-weight:bold;
+}
 
 .center {
     width: 100%;

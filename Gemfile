@@ -11,5 +11,5 @@ group :test do
   gem 'rspec'
   gem 'rspec-mocks'
   gem 'shotgun'
-  gem 'capybara'
+  #gem 'capybara'
 end
