@@ -9,15 +9,16 @@
 
       .row.logo
         %img(src="images/logo.png")
-      .row
-        .span8.offset2.center.well.dice_box
-          ==#{display_table_dice_set(game.table_set)}
-      .row
-        .span8.offset2.center
-          .btn-group
-            %a{:href=>"/roll", :class=>"btn btn-warning"} Roll
-            %input{:type=>"button", :class=>"btn btn-success", :value=>"Take"}
-            %a{:href=>"/reset", :class=>"btn btn-danger"} Reset
+      %form{ :action => "/take", :method => "post"}
+        .row
+          .span8.offset2.center.well.dice_box
+            ==#{display_table_dice_set(game.table_set)}
+        .row
+          .span8.offset2.center
+            .btn-group
+              %a{:href=>"/roll", :class=>"btn btn-warning"} Roll
+              %input{:type=>"submit", :class=>"btn btn-success", :value=>"Take"}
+              %a{:href=>"/reset", :class=>"btn btn-danger"} Reset
 
       .row
         .span8.offset2.center.well.margin20.dice_box

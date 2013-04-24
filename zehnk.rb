@@ -5,9 +5,9 @@ require './lib/game'
 require 'haml'
 require 'sinatra/session'
 require './helpers/view_helpers'
+require 'logger'
 
 set :session_secret, 'So0perSeKr3t!'
-
 
 get '/' do
   haml :index, :locals => { :game => current_game}
@@ -18,8 +18,10 @@ get '/reset' do
   redirect '/'
 end
 
-get '/take' do
-  current_game.pocket([1,2])
+
+post '/take' do
+  dices = params["dices"].keys.map {|v| v.to_i}
+  current_game.pocket(dices)
   redirect '/'
 end
 

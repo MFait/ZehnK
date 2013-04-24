@@ -26,7 +26,7 @@ helpers do
 
   def display_dice_with_checkbox(dice, index)
     "<div class='dice_image'>
-    <input type='checkbox' id='img_#{index}'/>
+    <input type='checkbox' id='img_#{index}' name='dices[#{index}]'/>
     <label for='img_#{index}'><img src='images/dice_#{dice.face}.png'/></label>
     </div>"
   end
