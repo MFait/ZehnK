@@ -3,6 +3,9 @@ require './lib/dice'
 require './lib/dice_set'
 require './lib/game'
 require 'haml'
+require 'sinatra/session'
+
+set :session_secret, 'So0perSeKr3t!'
 
 helpers do
   def display_table_dice_set(dice_set)
@@ -36,8 +39,14 @@ helpers do
 end
 
 get '/' do
-  game  = Game.new
-  game.start
-  game.pocket([1,2])
+  game = game_session
+  #game.start
+  #game.pocket([1,2])
   haml :index, :locals => { :game => game}
+end
+
+def game_session
+  session_start! unless session?
+  session["game"] = Game.new unless session["game"]
+  session["game"]
 end
