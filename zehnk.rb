@@ -47,6 +47,7 @@ end
 
 def game_session
   session_start! unless session?
-  session["game"] = Game.new unless session["game"]
+  session["game"] = Game.new.start unless session["game"]
+
   session["game"]
 end
