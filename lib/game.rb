@@ -1,10 +1,13 @@
 class Game
-  attr_accessor :table_set, :pocket_set
+  attr_accessor :table_set, :pocket_set, :pocket_score
 
   def start
     @table_set = DiceSet.new
-    @pocket_set = DiceSet.new
     6.times{ @table_set.add(Dice.new.roll) }
+
+    @pocket_set = DiceSet.new
+    @pocket_score = 0
+
     self
   end
 
@@ -14,7 +17,11 @@ class Game
   end
 
   def pocket(indices)
-    @pocket_set = @pocket_set + @table_set.take(indices)
+    taken_set = @table_set.take(indices)
+
+    @pocket_set = @pocket_set + taken_set
+    @pocket_score += Score.new.calculate(taken_set)
+
     self
   end
 end
