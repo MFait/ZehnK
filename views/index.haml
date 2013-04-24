@@ -15,9 +15,9 @@
       .row
         .span8.offset2.center
           .btn-group
-            %input{:type=>"button", :class=>"btn btn-warning", :value=>"Roll", :onclick=>"window.location.reload()"}
+            %a{:href=>"/roll", :class=>"btn btn-warning"} Roll
             %input{:type=>"button", :class=>"btn btn-success", :value=>"Take"}
-            %input{:type=>"button", :class=>"btn btn-danger", :value=>"Reset"}
+            %a{:href=>"/reset", :class=>"btn btn-danger"} Reset
 
       .row
         .span8.offset2.center.well.margin20.dice_box
