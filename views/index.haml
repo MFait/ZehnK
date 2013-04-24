@@ -6,8 +6,9 @@
     %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
   %body
     .container
-      %a(href="/")
-        %img(src="images/logo.png")
+      .row.logo
+        %a(href="/")
+          %img(src="images/logo.png")
       %form{ :action => "/take", :method => "post"}
         .row
           .span8.offset2.center.well.dice_box
