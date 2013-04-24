@@ -13,7 +13,7 @@ task :install do
   system %Q(bundle install)
 end
 
-desc "Start the app"
+desc "Starts the app"
 task :start => [:install] do
   `bundle exec ruby zehnk.rb`
 end
@@ -23,12 +23,12 @@ task :shotgun => [:install] do
   `bundle exec shotgun -p 4567 zehnk.rb`
 end
 
-# desc "setup remote branch for heroku"
+desc "Setup remote branch for heroku"
 task :setup do
   `git remote add heroku git@heroku.com:zehnk.git`
 end
 
-# desc "Deploys the app"
+desc "Deploys the app"
 task :deploy => [:install, :test] do
   `git push heroku master`
 end
