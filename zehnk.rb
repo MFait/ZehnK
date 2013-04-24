@@ -18,7 +18,6 @@ get '/reset' do
   redirect '/'
 end
 
-
 post '/take' do
   dices = params["dices"].keys.map {|v| v.to_i}
   current_game.pocket(dices)
@@ -28,6 +27,10 @@ end
 get '/roll' do
   current_game.roll
   redirect '/'
+end
+
+get '/help' do
+  haml :help
 end
 
 def current_game

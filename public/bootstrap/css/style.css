@@ -4,7 +4,6 @@
 
 .dice_box img{width: 80px; margin: 8px;}
 
-
 .dice_image {
     /*float: left;*/
     display: inline-block;
@@ -28,4 +27,8 @@
 
 .margin20 {
     margin-top: 20px;
+}
+
+.help-dice {
+    width:20px;
 }

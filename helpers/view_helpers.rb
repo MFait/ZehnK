@@ -35,4 +35,9 @@ helpers do
   def display_pocket_score(game)
     "<div class='pocket_score'>Score #{game.pocket_score}</div>"
   end
+
+  def help_dice(face)
+    "<img class='help-dice' src='images/dice_#{face}.png'/>"
+  end
+
 end
