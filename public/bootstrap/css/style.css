@@ -19,7 +19,7 @@
 .team_avatar{
     width: 60px;
 }
-.pocket_score {
+.pocket_score,.banked_amount {
     font-size: 48px;
     font-weight:bold;
 }

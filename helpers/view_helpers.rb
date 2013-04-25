@@ -33,7 +33,11 @@ helpers do
   end
 
   def display_pocket_score(game)
-    "<div class='pocket_score'>Score #{game.pocket_score}</div>"
+    "<div class='pocket_score'>Pocket #{game.pocket_score}</div>"
+  end
+
+  def display_banked_amount(game)
+    "<div class='banked_amount'>$ #{game.banked_amount}</div>"
   end
 
   def help_dice(face)
@@ -42,8 +46,9 @@ helpers do
 
   def display_bank_button(game)
     btn_class =  game.can_bank? ? 'btn-success' : 'disabled'
+    href =  game.can_bank? ? '/bank' : '#'
 
-    return "<a class='btn #{btn_class}' href='/bank'>
+    return "<a class='btn #{btn_class}' href='#{href}'>
               <span class='icon-briefcase'></span> Bank
             </a>"
   end

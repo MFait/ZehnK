@@ -34,6 +34,13 @@ get '/team'do
   haml :team
 end
 
+get '/bank' do
+  if current_game.can_bank?
+    current_game.bank
+  end
+  redirect '/'
+end
+
 def current_game
   session_start! unless session?
   session["game"] = Game.new.start unless session["game"]

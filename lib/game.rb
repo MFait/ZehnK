@@ -4,13 +4,10 @@ class Game
   MIN_BANKABLE = 350
 
   def start
-    @table_set = DiceSet.new
-    6.times{ @table_set.add(Dice.new.roll) }
+   init_table_set
+   init_pocket_set
 
-    @pocket_set = DiceSet.new
-    @pocket_score = 0
-
-    @banked_amount = 0
+   @banked_amount = 0
 
     self
   end
@@ -35,9 +32,23 @@ class Game
 
   def bank
     @banked_amount += @pocket_score
-    @pocket_score = 0
+    init_table_set()
+
+    init_pocket_set()
 
     self
+  end
+
+  private
+
+  def init_pocket_set
+    @pocket_set = DiceSet.new
+    @pocket_score = 0
+  end
+
+  def init_table_set
+    @table_set = DiceSet.new
+    6.times { @table_set.add(Dice.new.roll) }
   end
 
 end
