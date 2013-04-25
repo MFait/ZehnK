@@ -49,8 +49,8 @@ class DiceSet
     string = ''
     @dices.each do |dice|
        string << dice.to_s
-
     end
     string
   end
+
 end

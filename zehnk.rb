@@ -19,8 +19,7 @@ get '/reset' do
 end
 
 post '/take' do
-  dices = params["dices"].keys.map {|v| v.to_i}
-  current_game.pocket(dices)
+  current_game.pocket(keys_as_integers(params['dices']))
   redirect '/'
 end
 
@@ -38,4 +37,9 @@ def current_game
   session["game"] = Game.new.start unless session["game"]
 
   session["game"]
+end
+
+def keys_as_integers(params)
+  return [] if params.nil?
+  params.keys.map { |v| v.to_i }
 end

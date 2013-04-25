@@ -1,10 +1,8 @@
-require 'rspec'
+require './spec/helpers'
+require './zehnk'
+describe 'ZehnK' do
 
-describe 'My behaviour' do
+  it { keys_as_integers({'1'=>'on', '2'=>'on'}).should eq([1,2]) }
+  it { keys_as_integers(nil).should eq([]) }
 
-  it 'should do something' do
-
-    #To change this template use File | Settings | File Templates.
-    true.should == false
-  end
 end

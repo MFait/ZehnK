@@ -8,7 +8,7 @@
     .container
       .row.logo.margin20
         .span12
-          .span4
+          .span5
             %a(href="/")
               %img(src="images/logo.png")
           .span6
@@ -23,7 +23,6 @@
                 %li
                   %a{:href => '/help'} Help
       %hr
-
       %form{ :action => "/take", :method => "post"}
         .row
           .span8.offset2.center.well.dice_box
@@ -40,7 +39,6 @@
               %a{:href=>"/reset", :class=>"btn btn-danger"}
                 %span{:class=>"icon-refresh"}
                 Reset
-
       .row
         .span8.offset2.center.well.margin20.dice_box
           ==#{display_pocket_dice_set(game.pocket_set)}
