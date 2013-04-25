@@ -14,8 +14,11 @@ module Helpers
     dice_set
   end
 
-  def start_game_with(table_set)
+  def start_game_with(dice_faces)
+    game = Game.new.start
+    game.table_set = dice_set_with(dice_faces)
 
+    game
   end
 
 end

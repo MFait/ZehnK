@@ -40,4 +40,12 @@ helpers do
     "<img class='help-dice' src='images/dice_#{face}.png'/>"
   end
 
+  def display_bank_button(game)
+    btn_class =  game.can_bank? ? 'btn-success' : 'disabled'
+
+    return "<a class='btn #{btn_class}' href='/bank'>
+              <span class='icon-briefcase'></span> Bank
+            </a>"
+  end
+
 end
