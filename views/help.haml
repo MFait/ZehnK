@@ -1,92 +1,67 @@
-%html
-  %head
-    %title Zehnk
-    %link(rel="shortcut icon" href="/images/favicon.ico")
-    %link(rel="stylesheet" href="bootstrap/css/style.css" media="screen")
-    %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
-  %body
-    .container
-      .row.logo.margin20
-        .span12
-          .span5
-            %a(href="/")
-              %img(src="images/logo.png")
-          .span6
-            .masthead
-              %ul{:class=> "nav nav-pills pull-right"}
-                %li
-                  %a{:href=> "/"}Play
-                %li
-                  %a{:href=> "#"}About
-                %li
-                  %a{:href=> "/team"}Team
-                %li{:class => "active"}
-                  %a{:href => '/help'} Help
-      %hr
-    .row.margin20.help-dice
-      .span3.margin20.offset7
-        %table(class="table")
-          %tr
-            %td
-              = help_dice(5)
-            %td
-              %span(class="badge badge-info") 50
-          %tr
-            %td
-              = help_dice(5)
-              = help_dice(5)
-            %td
-              %span(class="badge badge-info") 100
-          %tr
-            %td
-              = help_dice(1)
-            %td
-              %span(class="badge badge-info") 100
-          %tr
-            %td
-              = help_dice(1)
-              = help_dice(1)
-            %td
-              %span(class="badge badge-info") 200
-          %tr
-            %td
-              = help_dice(2)
-              = help_dice(2)
-              = help_dice(2)
-            %td
-              %span(class="badge badge-warning") 200
-          %tr
-            %td
-              = help_dice(3)
-              = help_dice(3)
-              = help_dice(3)
-            %td
-              %span(class="badge badge-warning") 300
-          %tr
-            %td
-              = help_dice(4)
-              = help_dice(4)
-              = help_dice(4)
-            %td
-              %span(class="badge badge-warning") 400
-          %tr
-            %td
-              = help_dice(5)
-              = help_dice(5)
-              = help_dice(5)
-            %td
-              %span(class="badge badge-warning") 500
-          %tr
-            %td
-              = help_dice(6)
-              = help_dice(6)
-              = help_dice(6)
-            %td
-              %span(class="badge badge-warning") 600
-          %tr
-            %td
-              = help_dice(1)
-              = help_dice(1)
-              = help_dice(1)
-            %td
-              %span(class="badge badge-important") 1000
+.row.margin20.help-dice
+  .span3.margin20.offset4
+    %table(class="table")
+      %tr
+        %td
+          = help_dice(5)
+        %td
+          %span(class="badge badge-info") 50
+      %tr
+        %td
+          = help_dice(5)
+          = help_dice(5)
+        %td
+          %span(class="badge badge-info") 100
+      %tr
+        %td
+          = help_dice(1)
+        %td
+          %span(class="badge badge-info") 100
+      %tr
+        %td
+          = help_dice(1)
+          = help_dice(1)
+        %td
+          %span(class="badge badge-info") 200
+      %tr
+        %td
+          = help_dice(2)
+          = help_dice(2)
+          = help_dice(2)
+        %td
+          %span(class="badge badge-warning") 200
+      %tr
+        %td
+          = help_dice(3)
+          = help_dice(3)
+          = help_dice(3)
+        %td
+          %span(class="badge badge-warning") 300
+      %tr
+        %td
+          = help_dice(4)
+          = help_dice(4)
+          = help_dice(4)
+        %td
+          %span(class="badge badge-warning") 400
+      %tr
+        %td
+          = help_dice(5)
+          = help_dice(5)
+          = help_dice(5)
+        %td
+          %span(class="badge badge-warning") 500
+      %tr
+        %td
+          = help_dice(6)
+          = help_dice(6)
+          = help_dice(6)
+        %td
+          %span(class="badge badge-warning") 600
+      %tr
+        %td
+          = help_dice(1)
+          = help_dice(1)
+          = help_dice(1)
+        %td
+          %span(class="badge badge-important") 1000

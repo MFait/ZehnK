@@ -1,46 +1,27 @@
-%html
-  %head
-    %title Zehnk
-    %link(rel="shortcut icon" href="/images/favicon.ico")
-    %link(rel="stylesheet" href="bootstrap/css/style.css" media="screen")
-    %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
-  %body
-    .container
-      .row.logo.margin20
-        .span12
-          .span5
-            %a(href="/")
-              %img(src="images/logo.png")
-          .span6
-            .masthead
-              %ul{:class=> "nav nav-pills pull-right"}
-                %li{:class => "active"}
-                  %a{:href=> "#"}Play
-                %li
-                  %a{:href=> "#"}About
-                %li
-                  %a{:href=> "/team"}Team
-                %li
-                  %a{:href => '/help'} Help
-      %hr
-      %form{ :action => "/take", :method => "post"}
-        .row
-          .span8.offset2.center.well.dice_box
-            ==#{display_table_dice_set(game.table_set)}
-        .row
-          .span8.offset2.center
-            .btn-group
-              %a{:href=>"/roll", :class=>"btn btn-warning"}
-                %span{:class=>"icon-random"}
-                Roll
-              %button{:type=>"submit", :class=>"btn btn-success"}
-                %span{:class=>"icon-download"}
-                Take
-              %a{:href=>"/reset", :class=>"btn btn-danger"}
-                %span{:class=>"icon-refresh"}
-                Reset
-      .row
-        .span8.offset2.center.well.margin20.dice_box
-          ==#{display_pocket_dice_set(game.pocket_set)}
-          .margin20
-            ==#{display_pocket_score(game)}
+%form{ :action => "/take", :method => "post"}
+  .row
+    .span8.offset2.center.well.dice_box
+      ==#{display_table_dice_set(game.table_set)}
+  .row
+    .span8.offset2.center
+      .btn-group
+        %a{:href=>"/roll", :class=>"btn btn-warning"}
+          %span{:class=>"icon-random"}
+          Roll
+        %button{:type=>"submit", :class=>"btn btn-success"}
+          %span{:class=>"icon-download"}
+          Take
+        %a{:href=>"/reset", :class=>"btn btn-danger"}
+          %span{:class=>"icon-refresh"}
+          Reset
+.row
+  .span8.offset2.center.well.margin20.dice_box
+    ==#{display_pocket_dice_set(game.pocket_set)}
+    .margin20
+      ==#{display_pocket_score(game)}
+
+.row
+  .span8.offset2.center
+    %a{:href=>"/bank", :class=>"btn btn-success"}
+      %span{:class=>"icon-briefcase"}
+      Bank

@@ -1,11 +1,9 @@
 require 'sinatra'
-require './lib/dice'
-require './lib/dice_set'
-require './lib/game'
 require 'haml'
 require 'sinatra/session'
 require './helpers/view_helpers'
-require 'logger'
+
+Dir['./lib/*.rb'].each { |file| require file }
 
 set :session_secret, 'So0perSeKr3t!'
 

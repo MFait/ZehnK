@@ -34,4 +34,32 @@ describe 'Game' do
     new_game.pocket_score.should eq(150)
   end
 
+  it 'should check if one can bank' do
+    new_game = game.start
+    new_game.table_set = dice_set_with([3, 3, 3, 5])
+    new_game.pocket([0, 1, 2, 3])
+    new_game.can_bank?.should eq(true)
+  end
+
+  it { game.start.banked_amount.should eq(0) }
+
+  it 'should be able to bank' do
+    new_game = game.start
+    new_game.table_set = dice_set_with([3, 3, 3, 5])
+    new_game.pocket([0, 1, 2, 3])
+    new_game.bank
+    new_game.banked_amount.should eq(350)
+  end
+
+  it 'should be able to bank three ones' do
+    new_game = game.start
+    new_game.table_set = dice_set_with([1, 1, 1, 2])
+    new_game.pocket([0, 1, 2, 3])
+    new_game.bank.banked_amount.should eq(1000)
+  end
+
+  it 'should reset pocket score after banking' do
+
+  end
+
 end

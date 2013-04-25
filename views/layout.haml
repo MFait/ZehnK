@@ -1,0 +1,26 @@
+%html
+  %head
+    %title Zehnk
+    %link(rel="shortcut icon" href="/images/favicon.ico")
+    %link(rel="stylesheet" href="bootstrap/css/style.css" media="screen")
+    %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
+  %body
+    .container
+      .row.logo.margin20
+        .span12
+          .span5
+            %a(href="/")
+              %img(src="images/logo.png")
+          .span6
+            .masthead
+              %ul{:class=> "nav nav-pills pull-right"}
+                %li
+                  %a{:href=> "/"}Play
+                %li
+                  %a{:href=> "#"}About
+                %li
+                  %a{:href=> "/team"}Team
+                %li
+                  %a{:href => '/help'} Help
+      %hr
+      =yield

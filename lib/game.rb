@@ -1,6 +1,7 @@
 require './lib/score'
 class Game
-  attr_accessor :table_set, :pocket_set, :pocket_score
+  attr_accessor :table_set, :pocket_set, :pocket_score, :banked_amount
+  MIN_BANKABLE = 350
 
   def start
     @table_set = DiceSet.new
@@ -8,6 +9,8 @@ class Game
 
     @pocket_set = DiceSet.new
     @pocket_score = 0
+
+    @banked_amount = 0
 
     self
   end
@@ -22,6 +25,17 @@ class Game
 
     @pocket_set = @pocket_set + taken_set
     @pocket_score += Score.new.calculate(taken_set)
+
+    self
+  end
+
+  def can_bank?
+    @pocket_score >= MIN_BANKABLE
+  end
+
+  def bank
+    @banked_amount += @pocket_score
+    @pocket_score = 0
 
     self
   end

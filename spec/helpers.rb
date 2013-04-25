@@ -14,8 +14,14 @@ module Helpers
     dice_set
   end
 
+  def start_game_with(table_set)
+
+  end
+
 end
 
 RSpec.configure do |c|
   c.include Helpers
 end
+
+
