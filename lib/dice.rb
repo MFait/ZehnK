@@ -20,7 +20,6 @@ class Dice
     @face = face
   end
 
-
   def roll
     @face = range_rand(MIN, MAX)
     self

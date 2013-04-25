@@ -28,7 +28,7 @@ describe 'Game' do
   it { game.start.pocket_score.should eq(0) }
 
   it 'should add score to pocket score' do
-     new_game = Game.new.start
+    new_game = Game.new.start
     new_game.table_set = dice_set_with([1,5,3])
     new_game.pocket([0,1])
     new_game.pocket_score.should eq(150)

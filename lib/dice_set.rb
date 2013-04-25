@@ -17,7 +17,6 @@ class DiceSet
     self
   end
 
-
   def take(indices)
     taken_dice_set = DiceSet.new
     left_dices = []

@@ -15,6 +15,10 @@
     bottom: 10;
     left: 10;
 }
+
+.team_avatar{
+    width: 60px;
+}
 .pocket_score {
     font-size: 48px;
     font-weight:bold;

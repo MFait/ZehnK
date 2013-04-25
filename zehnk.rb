@@ -32,6 +32,10 @@ get '/help' do
   haml :help
 end
 
+get '/team'do
+  haml :team
+end
+
 def current_game
   session_start! unless session?
   session["game"] = Game.new.start unless session["game"]

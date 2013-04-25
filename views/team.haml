@@ -1,0 +1,54 @@
+%html
+  %head
+    %title Zehnk
+    %link(rel="shortcut icon" href="/images/favicon.ico")
+    %link(rel="stylesheet" href="bootstrap/css/style.css" media="screen")
+    %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
+  %body
+    .container
+      .row.logo.margin20
+        .span12
+          .span4
+            %a(href="/")
+              %img(src="images/logo.png")
+          .span6
+            .masthead
+              %ul{:class=> "nav nav-pills pull-right"}
+                %li
+                  %a{:href=> "/"}Play
+                %li
+                  %a{:href=> "#"}About
+                %li{:class => "active"}
+                  %a{:href=> "#"}Team
+                %li
+                  %a{:href => '/help'} Help
+      %hr
+    .container
+      .row.team_avatar
+        .span8.offset2
+          %ul{:class=>'thumbnails'}
+            %li{:class=>'span4'}
+              .thumbnail
+                %a{:href=>''}
+                  %img(src="images/jackie.png")
+                %h3{:class=>'center'}
+                  Jackie Mutua
+            %li{:class=>'span4'}
+              .thumbnail
+                %a{:href=>''}
+                  %img(src="images/felix.png")
+                %h3{:class=>'center'}
+                  Felix Kitaka
+            %li{:class=>'span4'}
+              .thumbnail
+                %a{:href=>''}
+                  %img(src="images/andrew.png")
+                %h3{:class=>'center'}
+                  Andrew Mukiza
+            %li{:class=>'span4'}
+              .thumbnail
+                %a{:href=>''}
+                  %img(src="images/michael.png")
+                %h3{:class=>'center'}
+                  Micheal Fait
+
