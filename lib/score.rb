@@ -20,6 +20,31 @@ class Score
     sum
   end
 
+  def can_calculate?(dice_set)
+    occurrences_by_face(dice_set).each { |face, occurrence|
+      return false if triple_only_face?(face) and not occurs_three_or_six_times?(occurrence)
+    }
+    true
+  end
+
+  private
+
+  def occurs_three_or_six_times?(occurrences)
+    occurrences % 3 == 0
+  end
+
+  def triple_only_face?(face)
+    [2,3,4,6].include?(face)
+  end
+
+  def occurrences_by_face(dice_set)
+    map = {}
+    dice_set.dices.each { |dice|
+      map[dice.face].nil? ? map[dice.face] = 1 : map[dice.face] += 1
+    }
+    map
+  end
+
   def number_of(face)
     @dices.select { |dice| dice.face==face}.length
   end
