@@ -53,4 +53,11 @@ helpers do
             </a>"
   end
 
+  def display_alerts
+    if session['error']
+      output = "<div class='alert alert-error'>#{session['error']}</div>"
+      session['error'] = nil
+      output
+    end
+  end
 end

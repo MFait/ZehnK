@@ -7,6 +7,10 @@ Dir['./lib/*.rb'].each { |file| require file }
 
 set :session_secret, 'So0perSeKr3t!'
 
+before do
+
+end
+
 get '/' do
   haml :index, :locals => { :game => current_game}
 end
@@ -17,7 +21,11 @@ get '/reset' do
 end
 
 post '/take' do
-  current_game.pocket(keys_as_integers(params['dices']))
+  begin
+    current_game.pocket(keys_as_integers(params['dices']))
+  rescue => e
+    session["error"] = e.message
+  end
   redirect '/'
 end
 

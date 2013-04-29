@@ -2,6 +2,7 @@ require './lib/score'
 class Game
   attr_accessor :table_set, :pocket_set, :pocket_score, :banked_amount
   MIN_BANKABLE = 350
+  INVALID_SET_EXCEPTION = "Invalid Set"
 
   def start
    init_table_set
@@ -18,6 +19,9 @@ class Game
   end
 
   def pocket(indices)
+    would_be_taken = @table_set.clone.take(indices)
+    raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(would_be_taken)
+
     taken_set = @table_set.take(indices)
 
     @pocket_set = @pocket_set + taken_set

@@ -17,10 +17,10 @@ describe 'Game' do
   end
 
   it {
-    new_game = start_game_with([1,2,3]).pocket([0, 1])
+    new_game = start_game_with([1,2,3]).pocket([0])
 
-    new_game.table_set.should eq(dice_set_with([3]))
-    new_game.pocket_set.should eq(dice_set_with([1,2]))
+    new_game.table_set.should eq(dice_set_with([2, 3]))
+    new_game.pocket_set.should eq(dice_set_with([1]))
   }
 
   it { game.start.pocket_score.should eq(0) }
@@ -43,35 +43,23 @@ describe 'Game' do
   }
 
   it {
-    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2, 3]).bank
+    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2]).bank
     new_game.bank.banked_amount.should eq(1000)
   }
 
   it {
-    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2, 3]).bank
+    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2]).bank
     new_game.pocket_score.should eq(0)
   }
 
   it 'should reset pocket set after banking' do
-    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2, 3]).bank
+    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2]).bank
     new_game.pocket_set.should eq(DiceSet.new)
   end
 
-  #it 'should add pocket set to table set' do
-  #  new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2, 3]).bank
-  #  new_game.table_set.should eq(dice_set_with([1, 1, 1, 2]))
-  #end
-  #
-  #it 'should roll table set after banking' do
-  #  mocked_table_set = double("dice_set")
-  #  mocked_table_set.should_receive(:roll)
-  #  mocked_table_set.should_receive("+")
-  #
-  #  new_game = Game.new.start
-  #  new_game.table_set = mocked_table_set
-  #  new_game.pocket_set = dice_set_with([3,3,3,5])
-  #
-  #  new_game.bank
-  #
-  #end
+  it 'should thrown an exception when passed invalid pocket' do
+    new_game = start_game_with([1, 1, 1, 2])
+    expect{new_game.pocket([0,3])}.to raise_error()
+  end
+
 end
