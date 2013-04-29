@@ -62,25 +62,24 @@ describe 'Game' do
     expect{new_game.pocket([0,3])}.to raise_error()
   end
 
-  it 'should check if can roll again' do
-    start_game_with([1, 5, 3, 2]).roll.roll_again.should eq(false)
-  end
-
-  it 'should be possible to roll again after taking or pocketing' do
-    new_game = start_game_with([1, 5, 3, 2]).roll
-    new_game.table_set = dice_set_with([1,5])
-    new_game.pocket([0, 1]).roll_again.should eq(true)
-  end
-
   it 'should reset pocket and table set if one cant roll again' do
     new_game = start_game_with([1, 5, 3, 2]).roll
     new_game.pocket_set = dice_set_with([1,5])
     new_game.roll
 
     new_game.pocket_set.should eq(DiceSet.new)
-
-
-
   end
+
+  it 'should track the last called method' do
+    start_game_with([1, 5, 3, 2]).roll.last_action.should eq(:roll)
+    start_game_with([1, 5, 3, 2]).pocket([0,1]).last_action.should eq(:pocket)
+  end
+
+  it 'should bank only if last action was pocket' do
+    new_game = start_game_with([1, 1, 1, 2]).pocket([0, 1, 2])
+    new_game.roll.bank
+    new_game.banked_amount.should eq(0)
+  end
+
 
 end
