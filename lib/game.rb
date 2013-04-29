@@ -1,6 +1,6 @@
 require './lib/score'
 class Game
-  attr_accessor :table_set, :pocket_set, :pocket_score, :banked_amount
+  attr_accessor :table_set, :pocket_set, :pocket_score, :banked_amount, :roll_again
   MIN_BANKABLE = 350
   INVALID_SET_EXCEPTION = "Invalid Set"
 
@@ -9,12 +9,19 @@ class Game
    init_pocket_set
 
    @banked_amount = 0
+   @roll_again = true
 
     self
   end
 
   def roll
+    unless @roll_again
+      init_table_set
+      init_pocket_set
+    end
+
     @table_set.roll
+    @roll_again = false
     self
   end
 
@@ -27,6 +34,7 @@ class Game
     @pocket_set = @pocket_set + taken_set
     @pocket_score += Score.new.calculate(taken_set)
 
+    @roll_again = true
     self
   end
 
