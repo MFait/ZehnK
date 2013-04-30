@@ -81,5 +81,17 @@ describe 'Game' do
     new_game.banked_amount.should eq(0)
   end
 
+  it 'should reset table set when we roll and last action was pocket and table set is empty' do
+    new_game = start_game_with([1, 1, 1, 3, 3, 3]).pocket([0, 1, 2, 3, 4, 5])
+    new_game.roll.table_set.count.should eq(6)
+
+  end
+
+  it 'should reset pocket set when we roll and last action was pocket and table set is empty' do
+    new_game = start_game_with([1, 1, 1, 3, 3, 3]).pocket([0, 1, 2, 3, 4, 5])
+    new_game.roll.pocket_set.count.should eq(0)
+    new_game.pocket_score.should_not  eq(0)
+  end
+
 
 end

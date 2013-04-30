@@ -5,24 +5,25 @@ class Game
   INVALID_SET_EXCEPTION = "Invalid Set"
 
   def start
-   init_table_set
-   init_pocket_set
-
+   reset_sets
    @banked_amount = 0
 
     self
   end
 
   def roll
-    if @last_action == :roll
+    reset_sets unless can_roll_again?
+    if pocketed_everything?
       init_table_set
-      init_pocket_set
+      @pocket_set = DiceSet.new
     end
 
     @table_set.roll
     @last_action = :roll
+
     self
   end
+
 
   def pocket(indices)
     would_be_taken = @table_set.clone.take(indices)
@@ -45,8 +46,7 @@ class Game
     if can_bank?
       @banked_amount += @pocket_score
 
-      init_table_set()
-      init_pocket_set()
+      reset_sets
     end
 
     self
@@ -62,6 +62,19 @@ class Game
   def init_table_set
     @table_set = DiceSet.new
     6.times { @table_set.add(Dice.new.roll) }
+  end
+
+  def reset_sets
+    init_table_set
+    init_pocket_set
+  end
+
+  def pocketed_everything?
+    @last_action == :pocket and @table_set.empty?
+  end
+
+  def can_roll_again?
+    @last_action != :roll
   end
 
 end

@@ -18,6 +18,10 @@ describe 'DiceSet' do
 
   it { dice_set_with([1,2,3,4]).should_not eq(dice_set_with([5,6,1,2])) }
 
+  it 'should be able to know whether dice set is empty or not' do
+    dice_set_with([]).empty?.should eq(true)
+  end
+
   it 'should add an array of dices to array set' do
     dice_set.add([dice, dice, dice]).count.should eq(3)
   end

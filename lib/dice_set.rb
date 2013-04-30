@@ -10,6 +10,10 @@ class DiceSet
     @dices.count
   end
 
+  def empty?
+    @dices.count == 0
+  end
+
   def add(dices)
     dices = [dices] unless dices.is_a?(Array)
 
