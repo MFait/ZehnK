@@ -6,6 +6,9 @@ gem 'rake'
 gem 'sinatra'
 gem 'sinatra-session'
 gem 'haml'
+gem 'activerecord'
+gem 'sinatra-activerecord'
+gem 'pg'
 
 group :test do
   gem 'rspec'
