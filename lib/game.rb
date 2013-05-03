@@ -7,13 +7,14 @@ class Game
   INVALID_SET_EXCEPTION = "Invalid Set"
 
   def start
-   reset_sets
-   @bank = Bank.new
+    reset_table_and_pocket
+    @bank = Bank.new
+
     self
   end
 
   def roll
-    reset_sets unless can_roll_again?
+    reset_table_and_pocket unless can_roll_again?
 
     if took_everything?
       @table = Table.new
@@ -21,16 +22,17 @@ class Game
     end
 
     @table.roll
+
     @last_action = :roll
 
     self
   end
 
-
   def take(indices)
     raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(@table.clone.take(indices))
 
     @pocket.add(@table.take(indices))
+
     @last_action = :take
 
     self
@@ -43,7 +45,7 @@ class Game
   def deposit
     if can_bank?
       @bank.add(@pocket.score)
-      reset_sets
+      reset_table_and_pocket
     end
 
     self
@@ -51,13 +53,13 @@ class Game
 
   private
 
-  def reset_sets
+  def reset_table_and_pocket
     @table = Table.new
     @pocket = Pocket.new
   end
 
   def took_everything?
-    @last_action == :take and @table.set.empty?
+    @last_action == :take and @table.empty?
   end
 
   def can_roll_again?
