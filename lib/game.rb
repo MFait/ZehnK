@@ -1,50 +1,48 @@
 require './lib/score'
+require './lib/table'
 class Game
-  attr_accessor :table_set, :pocket_set, :pocket_score, :banked_amount, :last_action
+  attr_accessor :table, :banked_amount, :last_action, :pocket
   MIN_BANKABLE = 350
   INVALID_SET_EXCEPTION = "Invalid Set"
 
   def start
    reset_sets
    @banked_amount = 0
-
     self
   end
 
   def roll
     reset_sets unless can_roll_again?
-    if pocketed_everything?
-      init_table_set
-      @pocket_set = DiceSet.new
+
+    if took_everything?
+      @table = Table.new
+      @pocket.reset_only_set
     end
 
-    @table_set.roll
+    @table.roll
     @last_action = :roll
 
     self
   end
 
 
-  def pocket(indices)
-    would_be_taken = @table_set.clone.take(indices)
+  def take(indices)
+    would_be_taken = @table.clone.take(indices)
     raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(would_be_taken)
 
-    taken_set = @table_set.take(indices)
+    @pocket.add(@table.take(indices))
 
-    @pocket_set = @pocket_set + taken_set
-    @pocket_score += Score.new.calculate(taken_set)
-
-    @last_action = :pocket
+    @last_action = :take
     self
   end
 
   def can_bank?
-    @last_action == :pocket and @pocket_score >= MIN_BANKABLE
+    @last_action == :take and @pocket.score >= MIN_BANKABLE
   end
 
   def bank
     if can_bank?
-      @banked_amount += @pocket_score
+      @banked_amount += @pocket.score
 
       reset_sets
     end
@@ -54,23 +52,13 @@ class Game
 
   private
 
-  def init_pocket_set
-    @pocket_set = DiceSet.new
-    @pocket_score = 0
-  end
-
-  def init_table_set
-    @table_set = DiceSet.new
-    6.times { @table_set.add(Dice.new.roll) }
-  end
-
   def reset_sets
-    init_table_set
-    init_pocket_set
+    @table = Table.new
+    @pocket = Pocket.new
   end
 
-  def pocketed_everything?
-    @last_action == :pocket and @table_set.empty?
+  def took_everything?
+    @last_action == :take and @table.set.empty?
   end
 
   def can_roll_again?

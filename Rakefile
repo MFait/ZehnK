@@ -1,6 +1,8 @@
 require 'rake'
 require 'rspec/core/rake_task'
 require 'bundler'
+require "sinatra/activerecord/rake"
+require './zehnk'
 
 RSpec::Core::RakeTask.new(:test)
 
