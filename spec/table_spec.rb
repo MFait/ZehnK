@@ -19,9 +19,17 @@ describe 'Table' do
     table.take([])
   end
 
-  #it 'should clone the set' do
-  #  table.set = dice_set_with([1,2,2,2])
-  #  new_table = table.clone
-  #  new_table.set.should eq(dice_set_with([1,2,2,2]))
-  #end
+  it 'should check if table is empty' do
+    mocked_set = double('dice_set')
+    mocked_set.should_receive(:empty?)
+    table.set = mocked_set
+    table.empty?
+  end
+
+  it 'should clone the set' do
+    table.set = dice_set_with([1,2,2,2])
+    new_table = table.clone
+    new_table.set.should eq(dice_set_with([1,2,2,2]))
+  end
+
 end

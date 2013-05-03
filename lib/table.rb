@@ -20,4 +20,8 @@ class Table
     new_table
   end
 
+  def empty?
+    @set.empty?
+  end
+
 end

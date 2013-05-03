@@ -1,13 +1,14 @@
 require './lib/score'
 require './lib/table'
+
 class Game
-  attr_accessor :table, :banked_amount, :last_action, :pocket
+  attr_accessor :table, :bank, :last_action, :pocket
   MIN_BANKABLE = 350
   INVALID_SET_EXCEPTION = "Invalid Set"
 
   def start
    reset_sets
-   @banked_amount = 0
+   @bank = Bank.new
     self
   end
 
@@ -27,12 +28,11 @@ class Game
 
 
   def take(indices)
-    would_be_taken = @table.clone.take(indices)
-    raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(would_be_taken)
+    raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(@table.clone.take(indices))
 
     @pocket.add(@table.take(indices))
-
     @last_action = :take
+
     self
   end
 
@@ -40,10 +40,9 @@ class Game
     @last_action == :take and @pocket.score >= MIN_BANKABLE
   end
 
-  def bank
+  def deposit
     if can_bank?
-      @banked_amount += @pocket.score
-
+      @bank.add(@pocket.score)
       reset_sets
     end
 

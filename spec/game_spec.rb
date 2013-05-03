@@ -35,25 +35,25 @@ describe 'Game' do
     new_game.can_bank?.should eq(true)
   }
 
-  it { game.start.banked_amount.should eq(0) }
+  it { game.start.bank.amount.should eq(0) }
 
   it {
-    new_game = start_game_with([3, 3, 3, 5]).take([0, 1, 2, 3]).bank
-    new_game.banked_amount.should eq(350)
+    new_game = start_game_with([3, 3, 3, 5]).take([0, 1, 2, 3]).deposit
+    new_game.bank.amount.should eq(350)
   }
 
   it {
-    new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2]).bank
-    new_game.bank.banked_amount.should eq(1000)
+    new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2]).deposit
+    new_game.deposit.bank.amount.should eq(1000)
   }
 
   it {
-    new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2]).bank
+    new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2]).deposit
     new_game.pocket.score.should eq(0)
   }
 
   it 'should reset pocket set after banking' do
-    new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2]).bank
+    new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2]).deposit
     new_game.pocket.set.should eq(DiceSet.new)
   end
 
@@ -77,8 +77,8 @@ describe 'Game' do
 
   it 'should bank only if last action was pocket' do
     new_game = start_game_with([1, 1, 1, 2]).take([0, 1, 2])
-    new_game.roll.bank
-    new_game.banked_amount.should eq(0)
+    new_game.roll.deposit
+    new_game.bank.amount.should eq(0)
   end
 
   it 'should reset table set when we roll and last action was pocket and table set is empty' do
