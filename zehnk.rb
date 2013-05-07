@@ -2,29 +2,15 @@ require 'sinatra'
 require 'haml'
 require 'sinatra/session'
 require './helpers/view_helpers'
-require './models/player_model'
+require './models/player'
+require './lib/game'
+require './models/action'
 require "pry"
-#binding.pry
 
 Dir['./lib/*.rb'].each { |file| require file }
 
 set :session_secret, 'So0perSeKr3t!'
 set :database, "postgres://Kitaka@localhost/spike"
-
-before do
-
-end
-
-get '/dummy' do
-  player = PlayerModel.new(:name=>"Andrew Mukiza", :score=>1000)
-  player.save()
-  "Done!"
-end
-
-get '/all' do
-  players = PlayerModel.all
-  #binding.pry
-end
 
 get '/' do
   haml :index, :locals => { :game => current_game}
@@ -67,8 +53,7 @@ end
 
 def current_game
   session_start! unless session?
-  session["game"] = Game.new.start unless session["game"]
-
+  session["game"] = GameEngine::Game.new.start unless session["game"]
   session["game"]
 end
 

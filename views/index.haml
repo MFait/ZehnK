@@ -1,7 +1,7 @@
 %form{ :action => "/take", :method => "post"}
   .row
     .span8.offset2.center.well.dice_box
-      ==#{display_table_dice_set(game.table_set)}
+      ==#{display_table_dice_set(game.table.set)}
   .row
     .span8.offset2.center
       .btn-group
@@ -16,7 +16,7 @@
           Reset
 .row
   .span8.offset2.center.well.margin20.dice_box
-    ==#{display_pocket_dice_set(game.pocket_set)}
+    ==#{display_pocket_dice_set(game.pocket.set)}
     .margin20
       ==#{display_pocket_score(game)}
 

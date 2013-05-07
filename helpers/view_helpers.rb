@@ -33,11 +33,11 @@ helpers do
   end
 
   def display_pocket_score(game)
-    "<div class='pocket_score'>Pocket #{game.pocket_score}</div>"
+    "<div class='pocket_score'>Pocket #{game.pocket.score}</div>"
   end
 
   def display_banked_amount(game)
-    "<div class='banked_amount'>$ #{game.banked_amount}</div>"
+    "<div class='banked_amount'>$ #{game.bank.amount}</div>"
   end
 
   def help_dice(face)

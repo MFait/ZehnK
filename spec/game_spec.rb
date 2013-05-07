@@ -1,5 +1,7 @@
 require './spec/helpers'
 
+include GameEngine
+
 describe 'Game' do
   let(:game){Game.new}
 
