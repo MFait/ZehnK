@@ -4,13 +4,19 @@ require './lib/table'
 module GameEngine
 
   class Game
-    attr_accessor :table, :bank, :last_action, :pocket
+    attr_accessor :table, :bank, :last_action, :pocket, :players
     MIN_BANKABLE = 350
     INVALID_SET_EXCEPTION = "Invalid Set"
 
     def start
       reset_table_and_pocket
       @bank = Bank.new
+      @players = []
+      self
+    end
+
+    def add(player)
+      @players << player
 
       self
     end

@@ -95,4 +95,12 @@ describe 'Game' do
     new_game.pocket.score.should_not  eq(0)
   end
 
+  it 'should have no players when game starts' do
+    Game.new.start.players.count.should eq(0)
+  end
+
+  it 'should add players to game' do
+    game.start.add(Player.new).players.count.should eq(1)
+  end
+
 end

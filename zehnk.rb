@@ -2,7 +2,7 @@ require 'sinatra'
 require 'haml'
 require 'sinatra/session'
 require './helpers/view_helpers'
-require './models/player'
+#require './models/player'
 require './lib/game'
 require './models/action'
 require "pry"

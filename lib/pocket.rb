@@ -16,4 +16,8 @@ class Pocket
     @score += Score.new.calculate(set)
   end
 
+  def ==(other)
+    @set == other.set and @score == other.score
+  end
+
 end
