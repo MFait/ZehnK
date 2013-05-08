@@ -46,6 +46,11 @@ module GameEngine
       self
     end
 
+    #def pick(indices)
+    #  raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(@table.clone.take(indices))
+    #  @table.take(indices)
+    #end
+
     def can_bank?
       @last_action == :take and @pocket.score >= MIN_BANKABLE
     end

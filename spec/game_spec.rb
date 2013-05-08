@@ -103,4 +103,11 @@ describe 'Game' do
     game.start.add(Player.new).players.count.should eq(1)
   end
 
+  it 'should pick dices from table_set' do
+    new_game = start_game_with([1,2,3])
+
+    new_game.pick([0]).should eq(dice_set_with([1]))
+    new_game.table.set.should eq(dice_set_with([2, 3]))
+  end
+
 end
