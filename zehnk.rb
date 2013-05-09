@@ -10,7 +10,7 @@ require "pry"
 Dir['./lib/*.rb'].each { |file| require file }
 
 set :session_secret, 'So0perSeKr3t!'
-set :database, "postgres://Kitaka@localhost/spike"
+set :database, "postgres://kitaka@localhost/spike"
 
 get '/' do
   haml :index, :locals => { :game => current_game}

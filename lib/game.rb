@@ -16,6 +16,7 @@ module GameEngine
     end
 
     def add(player)
+      player.game = self
       @players << player
 
       self
@@ -46,10 +47,10 @@ module GameEngine
       self
     end
 
-    #def pick(indices)
-    #  raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(@table.clone.take(indices))
-    #  @table.take(indices)
-    #end
+    def pick(indices)
+      raise(INVALID_SET_EXCEPTION) unless Score.new.can_calculate?(@table.clone.take(indices))
+      @table.take(indices)
+    end
 
     def can_bank?
       @last_action == :take and @pocket.score >= MIN_BANKABLE
@@ -64,12 +65,17 @@ module GameEngine
       self
     end
 
+    def reset_table
+      @table = Table.new
+    end
+
     private
 
     def reset_table_and_pocket
       @table = Table.new
       @pocket = Pocket.new
     end
+
 
     def took_everything?
       @last_action == :take and @table.empty?

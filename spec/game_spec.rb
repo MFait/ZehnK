@@ -103,11 +103,22 @@ describe 'Game' do
     game.start.add(Player.new).players.count.should eq(1)
   end
 
+  it 'should pass its instance to a player' do
+    player = Player.new
+    game.start.add(player)
+    game.should eq(player.game)
+  end
+
   it 'should pick dices from table_set' do
     new_game = start_game_with([1,2,3])
 
     new_game.pick([0]).should eq(dice_set_with([1]))
     new_game.table.set.should eq(dice_set_with([2, 3]))
+  end
+
+  it 'should raise an error for an invalid pick' do
+    new_game = start_game_with([1, 1, 1, 2])
+    expect{new_game.pick([0,3])}.to raise_error()
   end
 
 end

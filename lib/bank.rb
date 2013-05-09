@@ -9,4 +9,9 @@ class Bank
     @amount += amount
     self
   end
+
+  def ==(other)
+    @amount == other.amount
+  end
+
 end
