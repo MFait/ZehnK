@@ -24,7 +24,7 @@ end
 
 post '/take' do
   begin
-    current_game.pocket(keys_as_integers(params['dices']))
+    current_game.take(keys_as_integers(params['dices']))
   rescue => e
     session["error"] = e.message
   end
