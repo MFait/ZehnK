@@ -46,7 +46,7 @@ end
 
 get '/bank' do
   if current_game.can_bank?
-    current_game.bank
+    current_game.deposit
   end
   redirect '/'
 end
